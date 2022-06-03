@@ -1,0 +1,12 @@
+{
+  "name": "Learning NoBS Typescript",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "devDependencies": {
+    "typescript": "^4.7.2"
+  },
+  "dependencies": {
+    "ts-node": "^10.8.0"
+  }
+}

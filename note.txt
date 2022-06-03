@@ -1,0 +1,2 @@
+The unknown type is kind of like the any type, but unlike the "any" type, it has to be type casted before it
+can actually be used.
