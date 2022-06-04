@@ -67,4 +67,6 @@ AdditionWithCallback(25, 35); //Third argument (callback) is not specified, and 
 /* Note */
 /**
  * 1. All Compulsory parameters in a function must be specified before the optional ones.
+ * 
+ * 2. The major players in optional parameters are optional chaining and nullish coalescing.
  */
