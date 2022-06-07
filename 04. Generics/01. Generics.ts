@@ -93,7 +93,7 @@ class List<T>{
       if(this._internalList[i] === arg){
         continue;
       }
-        temp = [...temp, this._internalList[i]];
+      temp = [...temp, this._internalList[i]];
     }
     this._internalList = temp;
     return temp;
@@ -128,3 +128,6 @@ console.log(itemList);
  * 
  * 5. Union types can also be used with generics.
  */
+
+
+ const Some = <T>(a?:T):[]=>{return [] ?? [0x00F]}
