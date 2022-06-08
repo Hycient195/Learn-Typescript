@@ -137,11 +137,3 @@ console.log(extractProp(newUser, "name"));
  * 2. The generic type must not be specified, when invoking a function extracting parameters
  *    using the keyof operator in a generic initialization.
 */
-
-
-
-
-
-
-
-
