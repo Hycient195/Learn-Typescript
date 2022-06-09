@@ -76,17 +76,21 @@ console.log(getValue());
  * The example below is not an actual implementation of a list, the aim of the example is just
  * to learn how generics work in their use with classes.
  */
+
 class List<T>{
   private _internalList: T[] = [];
- 
+
+  /** Returns the length of the list */
   public get Length (): number {
     return this._internalList.length;
   }
   
+  /** Adds a new Item to the List */
   public Add(arg: T): void{
     this._internalList = [...this._internalList, arg]
   }
 
+  /** Adds a new Item at the beginning of the list */
   public Remove(arg: T): T[]{
     let temp: T[] = [];
     for(let i = 0; i < this._internalList.length; i++){
@@ -96,18 +100,35 @@ class List<T>{
       temp = [...temp, this._internalList[i]];
     }
     this._internalList = temp;
-    return temp;
+    return this._internalList;
+  }
+
+  /** Replaces a specific item in the list with the another item */
+  public Replace(original: T, replacement: T): T[]{
+    let temp: T[] = [];
+    for(let i = 0; i < this._internalList.length; i++){
+      if(this._internalList[i] === original){
+        temp = [replacement];
+        continue;
+      }
+      temp = [...temp, this._internalList[i]]
+    }   
+    this._internalList = temp;
+    return this._internalList;
   }
 }
 
 let itemList = new List<string>();
 itemList.Add("Added this")
 itemList.Add("And another");
-
 console.log(itemList);
+console.log(itemList.Replace("Added this", "another"));
 
-console.log(itemList.Remove("And another"));
-console.log(itemList);
+
+// console.log(itemList.Remove("And another"));
+// console.log(itemList.Length);
+
+
 
 
 

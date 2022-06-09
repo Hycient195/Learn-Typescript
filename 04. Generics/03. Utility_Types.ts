@@ -67,13 +67,14 @@ function replace(obj1: Item, obj2: Partial<Item>): Item{
     ...obj2
   }
 }
-const replaces = replace({
-  index: 12,
-  type: "Edible"
-}, 
-{
-  type: "combustible"
-})
+// const replaces = replace({
+//   index: 12,
+//   type: "Edible"
+// }, 
+// {
+//   type: "combustible"
+// })
+
 
 /**
  * The Practical Applicaiton of the Partial Utility type is shown
