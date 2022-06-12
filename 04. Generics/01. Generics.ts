@@ -81,7 +81,7 @@ class List<T>{
   private _internalList: T[] = [];
 
   /** Returns the length of the list */
-  public get Length (): number {
+   public get Length (): number {
     return this._internalList.length;
   }
   
@@ -90,7 +90,7 @@ class List<T>{
     this._internalList = [...this._internalList, arg]
   }
 
-  /** Adds a new Item at the beginning of the list */
+  /** Removes a Specific Item From the List */
   public Remove(arg: T): T[]{
     let temp: T[] = [];
     for(let i = 0; i < this._internalList.length; i++){
@@ -101,6 +101,17 @@ class List<T>{
     }
     this._internalList = temp;
     return this._internalList;
+  }
+
+  /** Returns a boolean corresponding if the item passed exists in the list */
+  public Find(arg: T): boolean{
+    let _tempBool: boolean = false;
+    for(let i = 0; i < this._internalList.length; i++){
+      if(this._internalList[i] === arg){
+        _tempBool = true;
+        break;
+      }
+    }return _tempBool;
   }
 
   /** Replaces a specific item in the list with the another item */
@@ -123,6 +134,9 @@ itemList.Add("Added this")
 itemList.Add("And another");
 console.log(itemList);
 console.log(itemList.Replace("Added this", "another"));
+
+
+console.log(itemList.Find("And another"));
 
 
 // console.log(itemList.Remove("And another"));
