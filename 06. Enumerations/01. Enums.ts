@@ -23,7 +23,6 @@ enum Options{
   Better = "Better",
   Best = "Best"
 }
-
 function GetRemark(remark: Options): string{
   return `Your remark is registered as ${remark}`
 }
