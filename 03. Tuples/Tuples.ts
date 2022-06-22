@@ -13,7 +13,11 @@
 /**
  * A tuple is first defined with a type signature like every other type, and is then
  * assigned values with corresponding types for each of the index positions. These two
- * steps can either be some separetely or together as shown in the examples below.
+ * steps can either be dome separetely or together as shown in the examples below.
+ * 
+ * A tuple is more strict than an array, in that its size cannot be increased oncee
+ * it has been declared, and the value type at each index position cannot be changes
+ * once it has been declared.
  */
 
   /* Examples */

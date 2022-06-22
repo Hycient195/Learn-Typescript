@@ -13,11 +13,15 @@
  * which is not one out of the three would return an error. This is 
  * a form of type safety.
  * 
+ * Enumerations are of two kinds; 
+ * 1. The number Enums
+ * 2. The string Enums
+ * 
  * Let's take an example below
  */
 
 
-
+// String Enumerations
 enum Options{
   Good = "Good",
   Better = "Better",
@@ -35,6 +39,7 @@ const result = GetRemark(Options.Best);
  * the enumeration of options as shown below
 */
 
+// Numer Enumerations
 enum Proficiency{
   Novice,         // 0
   Beginner,       // 1
@@ -77,4 +82,8 @@ console.log(
  * 1. It is always good practice to assign string values that have 
  *    reasonable meanings to the context, to the entities in an
  *    enumeration. 
+ * 
+ * 2. String Enumerations are preferred becuase their values cannot
+ *    be substituted with a number as an option when being used to 
+ *    specify the ranges of values avalibale to an entity.
 */

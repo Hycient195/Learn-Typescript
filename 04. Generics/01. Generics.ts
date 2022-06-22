@@ -28,6 +28,28 @@ Arrange<number>(23, 64);
 
 
 
+/*==================================*/
+/* Using Generics With Type Aliases */
+/*==================================*/
+/**
+ * A Generic can also be used with explicity type aliases, which can in turn used by 
+ * an entity that uses the type and substitutes into it the exact type to be used
+ * We can see this as shown below.
+ * 
+*/
+type TEntity<T> = {
+  name: T,
+  title: T
+  description: T
+} 
+
+const SmartBoard: TEntity<string> = {
+  name: "Smartboard",
+  title: "Quality smartboard for educational use",
+  description: "A very long description used to describe the use of the item."
+}
+
+
 
 /*=====================================*/
 /* A Practical Application Of Generics */

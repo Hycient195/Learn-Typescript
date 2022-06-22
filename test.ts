@@ -7,3 +7,4 @@ interface small {
 interface big {
   comp: small & {one: 3}
 }
+
