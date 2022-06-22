@@ -61,7 +61,7 @@ enum Proficiency{
 */
 
 console.log(
-  (function PrintProficiency(proficiency: Proficiency){
+  (function PrintProficiency(proficiency: Proficiency): Proficiency{
     return proficiency
   })(Proficiency.Advanced)
 )
